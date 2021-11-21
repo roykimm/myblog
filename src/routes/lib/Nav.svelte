@@ -1,0 +1,29 @@
+<nav class="nav">
+	<ul class="nav-ul">
+		<li class="nav-li">
+			<a class="nav-a" href="/">Home</a>
+		</li>
+		<li class="nav-li">
+			<a class="nav-a" href="/blog">Blog</a>
+		</li>
+		<li class="nav-li">
+			<a class="nav-a" href="/about">About</a>
+		</li>
+		<li class="nav-li">
+			<a class="nav-a" href="/projects">Projects</a>
+		</li>
+	</ul>
+</nav>
+
+<style>
+	.nav-ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		list-style: none;
+	}
+	.nav-li {
+		padding: 10px;
+		margin: 0;
+	}
+</style>
