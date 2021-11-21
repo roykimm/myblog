@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape } from "./app-2abd4230.js";
+import { c as create_ssr_component, e as escape } from "./app-10f2ad46.js";
 function load({ error, status }) {
   return { props: { error, status } };
 }

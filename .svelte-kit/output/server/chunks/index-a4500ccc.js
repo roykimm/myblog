@@ -1,4 +1,4 @@
-import { c as create_ssr_component } from "./app-2abd4230.js";
+import { c as create_ssr_component } from "./app-10f2ad46.js";
 const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<h1>Home</h1>
 <h4>\uC548\uB155\uD558\uC138\uC694? \uAC1C\uBC1C\uC790 \uAE40\uBA85\uD6C8 \uAC1C\uBC1C\uBE14\uB85C\uADF8 \uC785\uB2C8\uB2E4.</h4>

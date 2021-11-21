@@ -1,12 +1,11 @@
 {
   ".svelte-kit/build/runtime/internal/start.js": {
-    "file": "start-4c1938f1.js",
+    "file": "start-bf1c4338.js",
     "src": ".svelte-kit/build/runtime/internal/start.js",
     "isEntry": true,
     "imports": [
       "_vendor-f01f4eb0.js",
-      "_preload-helper-ec9aa979.js",
-      "_paths-28a87002.js"
+      "_preload-helper-ec9aa979.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
@@ -28,27 +27,25 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-f8808e13.js",
+    "file": "pages/__layout.svelte-2368b460.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-f01f4eb0.js",
-      "src/routes/lib/Nav.svelte",
-      "_paths-28a87002.js"
+      "src/routes/lib/Nav.svelte"
     ],
     "css": [
       "assets/pages/__layout.svelte-6645d7e9.css"
     ]
   },
   "src/routes/lib/Nav.svelte": {
-    "file": "pages/lib/Nav.svelte-3633c11c.js",
+    "file": "pages/lib/Nav.svelte-c7f7fb9e.js",
     "src": "src/routes/lib/Nav.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-f01f4eb0.js",
-      "_paths-28a87002.js"
+      "_vendor-f01f4eb0.js"
     ],
     "css": [
       "assets/pages/lib/Nav.svelte-9f90fd1d.css"
@@ -91,14 +88,13 @@
     ]
   },
   "src/routes/blog/index.svelte": {
-    "file": "pages/blog/index.svelte-3507329c.js",
+    "file": "pages/blog/index.svelte-2f82d1ce.js",
     "src": "src/routes/blog/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-ec9aa979.js",
-      "_vendor-f01f4eb0.js",
-      "_paths-28a87002.js"
+      "_vendor-f01f4eb0.js"
     ],
     "dynamicImports": [
       "src/routes/blog/first-post.md",
@@ -176,9 +172,6 @@
   },
   "_vendor-f01f4eb0.js": {
     "file": "chunks/vendor-f01f4eb0.js"
-  },
-  "_paths-28a87002.js": {
-    "file": "chunks/paths-28a87002.js"
   },
   "_preload-helper-ec9aa979.js": {
     "file": "chunks/preload-helper-ec9aa979.js"

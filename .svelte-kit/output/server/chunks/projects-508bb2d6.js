@@ -1,4 +1,4 @@
-import { c as create_ssr_component } from "./app-2abd4230.js";
+import { c as create_ssr_component } from "./app-10f2ad46.js";
 const Projects = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<h1>Projects</h1>
 <h3>Fastapi restapi \uC11C\uBC84</h3>

@@ -1,5 +1,5 @@
-import { c as create_ssr_component, e as escape, a as each, d as add_attribute } from "./app-2abd4230.js";
-const allPosts = { "../blog/first-post.md": () => import("./first-post-2526cad9.js"), "../blog/forth-post.md": () => import("./forth-post-56b9e73f.js"), "../blog/second-post.md": () => import("./second-post-5f75347f.js"), "../blog/third-post.md": () => import("./third-post-d51948dc.js") };
+import { c as create_ssr_component, e as escape, a as each, b as add_attribute } from "./app-10f2ad46.js";
+const allPosts = { "../blog/first-post.md": () => import("./first-post-e28da93e.js"), "../blog/forth-post.md": () => import("./forth-post-f18108bf.js"), "../blog/second-post.md": () => import("./second-post-ea0573a4.js"), "../blog/third-post.md": () => import("./third-post-41f23f53.js") };
 let body = [];
 for (let path in allPosts) {
   body.push(allPosts[path]().then(({ metadata }) => {

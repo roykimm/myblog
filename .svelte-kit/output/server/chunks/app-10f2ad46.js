@@ -1442,9 +1442,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-4c1938f1.js",
+      file: assets + "/_app/start-bf1c4338.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-4c1938f1.js", assets + "/_app/chunks/vendor-f01f4eb0.js", assets + "/_app/chunks/preload-helper-ec9aa979.js", assets + "/_app/chunks/paths-28a87002.js"]
+      js: [assets + "/_app/start-bf1c4338.js", assets + "/_app/chunks/vendor-f01f4eb0.js", assets + "/_app/chunks/preload-helper-ec9aa979.js"]
     },
     fetched: void 0,
     floc: false,
@@ -1564,21 +1564,21 @@ const get_hooks = (hooks) => ({
   externalFetch: hooks.externalFetch || fetch
 });
 const module_lookup = {
-  "src/routes/__layout.svelte": () => import("./__layout-a6070bb0.js"),
-  ".svelte-kit/build/components/error.svelte": () => import("./error-d5e53663.js"),
-  "src/routes/index.svelte": () => import("./index-9b32c664.js"),
-  "src/routes/projects.md": () => import("./projects-1d4521be.js"),
-  "src/routes/about.md": () => import("./about-94565ca4.js"),
-  "src/routes/blog/index.svelte": () => import("./index-cfcb5c55.js"),
-  "src/routes/blog/second-post.md": () => import("./second-post-5f75347f.js"),
-  "src/routes/blog/first-post.md": () => import("./first-post-2526cad9.js"),
-  "src/routes/blog/forth-post.md": () => import("./forth-post-56b9e73f.js"),
-  "src/routes/blog/third-post.md": () => import("./third-post-d51948dc.js"),
-  "src/routes/tags/[tag].svelte": () => import("./_tag_-462e8775.js"),
-  "src/routes/Box.svelte": () => import("./Box-4f78ca8e.js"),
-  "src/routes/lib/Nav.svelte": () => import("./Nav-d39f4d23.js")
+  "src/routes/__layout.svelte": () => import("./__layout-17782da3.js"),
+  ".svelte-kit/build/components/error.svelte": () => import("./error-cdd53fc0.js"),
+  "src/routes/index.svelte": () => import("./index-a4500ccc.js"),
+  "src/routes/projects.md": () => import("./projects-508bb2d6.js"),
+  "src/routes/about.md": () => import("./about-66de973b.js"),
+  "src/routes/blog/index.svelte": () => import("./index-6d82396e.js"),
+  "src/routes/blog/second-post.md": () => import("./second-post-ea0573a4.js"),
+  "src/routes/blog/first-post.md": () => import("./first-post-e28da93e.js"),
+  "src/routes/blog/forth-post.md": () => import("./forth-post-f18108bf.js"),
+  "src/routes/blog/third-post.md": () => import("./third-post-41f23f53.js"),
+  "src/routes/tags/[tag].svelte": () => import("./_tag_-9a93a389.js"),
+  "src/routes/Box.svelte": () => import("./Box-19e1256d.js"),
+  "src/routes/lib/Nav.svelte": () => import("./Nav-029884f3.js")
 };
-const metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-f8808e13.js", "css": ["assets/pages/__layout.svelte-6645d7e9.css", "assets/pages/lib/Nav.svelte-9f90fd1d.css"], "js": ["pages/__layout.svelte-f8808e13.js", "chunks/vendor-f01f4eb0.js", "pages/lib/Nav.svelte-3633c11c.js", "chunks/paths-28a87002.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-30b8366b.js", "css": [], "js": ["error.svelte-30b8366b.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-b3020157.js", "css": [], "js": ["pages/index.svelte-b3020157.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/projects.md": { "entry": "pages/projects.md-7dac35f5.js", "css": [], "js": ["pages/projects.md-7dac35f5.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/about.md": { "entry": "pages/about.md-8ce581f4.js", "css": [], "js": ["pages/about.md-8ce581f4.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/blog/index.svelte": { "entry": "pages/blog/index.svelte-3507329c.js", "css": ["assets/pages/blog/index.svelte-4624fda0.css"], "js": ["pages/blog/index.svelte-3507329c.js", "chunks/preload-helper-ec9aa979.js", "chunks/vendor-f01f4eb0.js", "chunks/paths-28a87002.js"], "styles": [] }, "src/routes/blog/second-post.md": { "entry": "pages/blog/second-post.md-6601f62d.js", "css": [], "js": ["pages/blog/second-post.md-6601f62d.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/blog/first-post.md": { "entry": "pages/blog/first-post.md-92a320e8.js", "css": [], "js": ["pages/blog/first-post.md-92a320e8.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/blog/forth-post.md": { "entry": "pages/blog/forth-post.md-633c0073.js", "css": [], "js": ["pages/blog/forth-post.md-633c0073.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/blog/third-post.md": { "entry": "pages/blog/third-post.md-b48b0803.js", "css": [], "js": ["pages/blog/third-post.md-b48b0803.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/tags/[tag].svelte": { "entry": "pages/tags/_tag_.svelte-99da8f28.js", "css": [], "js": ["pages/tags/_tag_.svelte-99da8f28.js", "chunks/preload-helper-ec9aa979.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/Box.svelte": { "entry": "pages/Box.svelte-8b34daf3.js", "css": ["assets/pages/Box.svelte-a9182201.css"], "js": ["pages/Box.svelte-8b34daf3.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/lib/Nav.svelte": { "entry": "pages/lib/Nav.svelte-3633c11c.js", "css": ["assets/pages/lib/Nav.svelte-9f90fd1d.css"], "js": ["pages/lib/Nav.svelte-3633c11c.js", "chunks/vendor-f01f4eb0.js", "chunks/paths-28a87002.js"], "styles": [] } };
+const metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-2368b460.js", "css": ["assets/pages/__layout.svelte-6645d7e9.css", "assets/pages/lib/Nav.svelte-9f90fd1d.css"], "js": ["pages/__layout.svelte-2368b460.js", "chunks/vendor-f01f4eb0.js", "pages/lib/Nav.svelte-c7f7fb9e.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-30b8366b.js", "css": [], "js": ["error.svelte-30b8366b.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-b3020157.js", "css": [], "js": ["pages/index.svelte-b3020157.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/projects.md": { "entry": "pages/projects.md-7dac35f5.js", "css": [], "js": ["pages/projects.md-7dac35f5.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/about.md": { "entry": "pages/about.md-8ce581f4.js", "css": [], "js": ["pages/about.md-8ce581f4.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/blog/index.svelte": { "entry": "pages/blog/index.svelte-2f82d1ce.js", "css": ["assets/pages/blog/index.svelte-4624fda0.css"], "js": ["pages/blog/index.svelte-2f82d1ce.js", "chunks/preload-helper-ec9aa979.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/blog/second-post.md": { "entry": "pages/blog/second-post.md-6601f62d.js", "css": [], "js": ["pages/blog/second-post.md-6601f62d.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/blog/first-post.md": { "entry": "pages/blog/first-post.md-92a320e8.js", "css": [], "js": ["pages/blog/first-post.md-92a320e8.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/blog/forth-post.md": { "entry": "pages/blog/forth-post.md-633c0073.js", "css": [], "js": ["pages/blog/forth-post.md-633c0073.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/blog/third-post.md": { "entry": "pages/blog/third-post.md-b48b0803.js", "css": [], "js": ["pages/blog/third-post.md-b48b0803.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/tags/[tag].svelte": { "entry": "pages/tags/_tag_.svelte-99da8f28.js", "css": [], "js": ["pages/tags/_tag_.svelte-99da8f28.js", "chunks/preload-helper-ec9aa979.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/Box.svelte": { "entry": "pages/Box.svelte-8b34daf3.js", "css": ["assets/pages/Box.svelte-a9182201.css"], "js": ["pages/Box.svelte-8b34daf3.js", "chunks/vendor-f01f4eb0.js"], "styles": [] }, "src/routes/lib/Nav.svelte": { "entry": "pages/lib/Nav.svelte-c7f7fb9e.js", "css": ["assets/pages/lib/Nav.svelte-9f90fd1d.css"], "js": ["pages/lib/Nav.svelte-c7f7fb9e.js", "chunks/vendor-f01f4eb0.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -1595,4 +1595,4 @@ function render(request, {
   const host = request.headers["host"];
   return respond({ ...request, host }, options, { prerender });
 }
-export { each as a, base as b, create_ssr_component as c, add_attribute as d, escape as e, init as i, render as r, validate_component as v };
+export { each as a, add_attribute as b, create_ssr_component as c, escape as e, init as i, render as r, validate_component as v };

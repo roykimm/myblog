@@ -1,4 +1,4 @@
-import { c as create_ssr_component } from "./app-2abd4230.js";
+import { c as create_ssr_component } from "./app-10f2ad46.js";
 var Box_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".box.svelte-ib3aoo{width:200px;height:200px;border:4px dashed green}",
