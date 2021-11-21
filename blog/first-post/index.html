@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="/bellalogo.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+
+		
+
+		<link rel="modulepreload" href="/_app/start-d911411c.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-f01f4eb0.js">
+		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-2368b460.js">
+		<link rel="modulepreload" href="/_app/pages/lib/Nav.svelte-c7f7fb9e.js">
+		<link rel="modulepreload" href="/_app/pages/blog/first-post.md-92a320e8.js">
+		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-6645d7e9.css">
+		<link rel="stylesheet" href="/_app/assets/pages/lib/Nav.svelte-9f90fd1d.css">
+
+		<script type="module">
+			import { start } from "/_app/start-d911411c.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-2368b460.js"),
+						import("/_app/pages/blog/first-post.md-92a320e8.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "\u002Fblog\u002Ffirst-post",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+</head>
+
+<body>
+	<div id="svelte">
+
+
+<div class="container svelte-1dygz9d"><nav class="nav"><ul class="nav-ul svelte-12cy6fy"><li class="nav-li svelte-12cy6fy"><a class="nav-a" href="/">Home</a></li>
+		<li class="nav-li svelte-12cy6fy"><a class="nav-a" href="/blog">Blog</a></li>
+		<li class="nav-li svelte-12cy6fy"><a class="nav-a" href="/about">About</a></li>
+		<li class="nav-li svelte-12cy6fy"><a class="nav-a" href="/projects">Projects</a></li></ul>
+</nav>
+	<h1>Top todo apps</h1>
+<p>Posting : 2021-02-08</p>
+<div class="markdown-body">안녕하세요..   
+fastapi서버를 gunicorn, uvicorn 으로 aws ec2에 배포를 해보겠습니다.   
+<p>우선 로컬에서 작업한 프로젝트 파일을 git에 업로드 합니다.<br>
+pip freeze &gt; requirements.txt 하는 것도 잊지 않습니다.   </p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">  pip install uvicorn
+  pip install gunicorn
+  pip freeze &gt; requirements.txt
+  git add .
+  git commit -m &quot;test&quot;
+  git push origin master</code><!-- HTML_TAG_END --></pre>
+<p>다음은 터미널로 들어가 aws ec2에 원격으로 접속합니다.<br>
+git프로젝트를 클론 합니다.   </p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">ssh -i key.pem ubuntu@gobella.kr
+cd srv
+git clone ~~~.git</code><!-- HTML_TAG_END --></pre>
+<p>다음은 uvicorn 으로 개발서버를 한번 실행해 보도록 하겠습니다.<br>
+프로젝트 경로는 /home/ubuntu/srv/fast-api 입니다.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">cd fast-api[클론한 프로젝트폴더]
+python -m venv venv
+source venv/bin/activate 
+(venv) pip install -r requirements.txt
+(venv) uvicorn blog.main:app --host 0.0.0.0 --port 8003</code><!-- HTML_TAG_END --></pre>
+<p>위 내용이 정상 수행이 되면 gobella.kr:8003 으로 들어가 잘 동작하는지 확인 합니다.<br>
+잘 동작 되는지 확있했다면 종료 후 Gunicorn으로 실행 하여 봅시다.   </p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">(venv) gunicorn blog.main:app -w 4 -k uvicorn.workers.UvicornWorker
+(venv) sudo vi /etc/systemd/system/gunicorn.socket</code><!-- HTML_TAG_END --></pre>
+<p>소켓 파일에 다음과 같은 내용을 붙여넣기 합니다.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/gunicorn.sock
+
+[Install]
+WantedBy=sockets.target</code><!-- HTML_TAG_END --></pre>
+<p>그런 다음 systemd에 service파일을 작성합니다.   </p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">sudo vi /etc/systemd/system/gunicorn.service
+
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=root
+Group=deploy
+WorkingDirectory=/home/ubuntu/srv/fast-api   # 프로젝트 경로
+ExecStart=/home/ubuntu/srv/fast-api/venv/bin/gunicorn blog.main:app -w 4 -k uvicorn.workers.UvicornWorker --bind unix:/run/gunicorn.sock   # 앞부분은 venv안에 gunicorn모듈 파일이 있는 경로</code><!-- HTML_TAG_END --></pre>
+<p>그런 다음 하단의 명령어로 gunicorn 소켓을 시작 및 활성화 합니다.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">sudo systemctl start gunicorn.socket   # 소켓 시작
+sudo systemctl enable gunicorn.socket   # 소켓 활성화
+
+sudo systemctl status gunicorn.socket  # 소켓 상태 확인
+sudo systemctl status gunicorn  # 상태 확인</code><!-- HTML_TAG_END --></pre>
+<p>그런 다음 데몬 재시작과 gunicorn재시작 합니다.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">sudo systemctl daemon-reload
+sudo systemctl restart gunicorn</code><!-- HTML_TAG_END --></pre>
+<p>다음은 nginx설정입니다. 이미 설치가 되어있지 않으면 설치부터 진행하세요.   </p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">apt-get install nginx
+cd /etc/nginx/sites-available/ 
+cp mysite.conf fastapi.conf   # 기존 conf파일 중 하나를 복사
+vi fastapi.conf   # 수정</code><!-- HTML_TAG_END --></pre>
+<p>fastapi.conf 내용을 아래와 같이 수정합니다.  </p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">server &#123;
+    listen 8003;
+    server_name gobella.kr;
+    charset utf-8;
+
+    location / &#123;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    &#125;
+&#125;</code><!-- HTML_TAG_END --></pre>
+<p>수정이 완료 되었으면 심볼릭 링크를 걸어 줌니다. </p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">sudo ln -sf /etc/nginx/sites-available/fastapi.conf /etc/nginx/sites-enabled/fastapi.conf</code><!-- HTML_TAG_END --></pre>
+<p>sites-enabled 폴더 내에 fastapi.conf 파일이 생성된 것을 확인 후 하단의 명령어를 입력 하여 최종 확인 합니다.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">nginx -t # nginx 유효한지 확인
+service nginx restart # nginx 재시작</code><!-- HTML_TAG_END --></pre>
+<p>모든 작업이 완료 되었으므로 gobella.kr:8003으로 접속하여 fastapi로 만든 restapi가 잘 동작하는지 확인해 봅시다.<br>
+<img src="/img/sh48.png" alt="완료" title="sh48"></p></div>
+</div>
+
+
+
+			
+		</div>
+</body>
+
+</html>
