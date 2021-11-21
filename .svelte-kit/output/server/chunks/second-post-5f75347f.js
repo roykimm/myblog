@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape } from "./app-4d742649.js";
+import { c as create_ssr_component, e as escape } from "./app-2abd4230.js";
 const metadata = {
   "title": "Todo app go bella",
   "tags": ["personal", "tech"],

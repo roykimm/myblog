@@ -1,16 +1,20 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <nav class="nav">
 	<ul class="nav-ul">
 		<li class="nav-li">
-			<a class="nav-a" href="/">Home</a>
+			<a class="nav-a" href="{base}/">Home</a>
 		</li>
 		<li class="nav-li">
-			<a class="nav-a" href="/blog">Blog</a>
+			<a class="nav-a" href="{base}/blog">Blog</a>
 		</li>
 		<li class="nav-li">
-			<a class="nav-a" href="/about">About</a>
+			<a class="nav-a" href="{base}/about">About</a>
 		</li>
 		<li class="nav-li">
-			<a class="nav-a" href="/projects">Projects</a>
+			<a class="nav-a" href="{base}/projects">Projects</a>
 		</li>
 	</ul>
 </nav>

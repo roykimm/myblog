@@ -1,4 +1,5 @@
 <script context="module">
+	import { base } from '$app/paths';
 	const allPosts = import.meta.glob('./*.{md,svx}');
 
 	let body = [];
@@ -36,12 +37,13 @@
 <ul>
 	{#each dateSortedPosts as { path, metadata: { title, tags, date } }}
 		<li>
-			<a class="post-title" href={`/blog/${path.replace('.md', '').replace('.svx', '')}`}>{title}</a
+			<a class="post-title" href={`${base}/blog/${path.replace('.md', '').replace('.svx', '')}`}
+				>{title}</a
 			>
 			<p class="date">{new Date(date).toISOString().slice(0, 10)}</p>
 			<p>
 				{#each tags as tag}
-					<a class="tag" href={`/tags/${tag}`}># {tag}</a>
+					<a class="tag" href={`${base}/tags/${tag}`}># {tag}</a>
 				{/each}
 			</p>
 		</li>

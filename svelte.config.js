@@ -16,7 +16,12 @@ const config = {
 		})
 	},
 
-	preprocess: [mdsvex(mdsvexConfig)]
+	preprocess: [mdsvex(mdsvexConfig)],
+	// Comment the paths if wants to run in dev mode.
+	paths: {
+		base: '/myblog',
+		assets: '/myblog'
+	},
 };
 
 export default config;
